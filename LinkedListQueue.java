@@ -48,7 +48,7 @@ public class LinkedListQueue<Item> {
         return size;
     }
 
-    public void printDeque() {
+    public void printQueue() {
         for (int n = 0; n < size; n++) {
             System.out.print(this.get(n) + " ");
         }

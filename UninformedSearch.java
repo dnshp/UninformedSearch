@@ -4,8 +4,6 @@
 public class UninformedSearch {
     public static void main(String[] args)
     {
-        LinkedListQueue<City> queue = new LinkedListQueue<>();
-
         City oradea = new City("Oradea");
         City zerind = new City("Zerind");
         City arad = new City("Arad");
@@ -48,8 +46,12 @@ public class UninformedSearch {
         hirsova.neighbors = new City[]{urziceni, eforie};
         eforie.neighbors = new City[]{hirsova};
 
-        City start = arad;
-        City target = bucharest;
+        BreadthFirst(arad, bucharest);
+    }
+
+    public static void BreadthFirst(City start, City target)
+    {
+        LinkedListQueue<City> queue = new LinkedListQueue<>();
         boolean found = false;
         int steps = 0;
         queue.addFirst(start);
@@ -68,11 +70,5 @@ public class UninformedSearch {
             }
             steps ++;
         }
-        while (current != start)
-        {
-            System.out.print(current.name + " < ");
-            current = current.previous;
-        }
-        System.out.println(current.name);
     }
 }
