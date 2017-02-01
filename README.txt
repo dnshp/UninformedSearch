@@ -1,0 +1,3 @@
+This is my first attempt at writing an uninformed, unweighted search algorithm to solve the popular Romania problem, which deals with finding the most efficient path between two cities in Romania. In order to track parent nodes and thereby record the entire path of the agent, I generate a search tree in realtime from the graph rather than directly search the graph. I have so far implemented a Breadth-First Search (BFS) approach, and will be trying other methods in the future.
+
+The image included for reference was taken from http://centurion2.com/AIHomework/Searching/RomaniaMap.JPG.

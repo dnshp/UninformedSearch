@@ -2,6 +2,30 @@
  * Created by dineshparimi on 1/31/17.
  */
 public class UninformedSearch {
+    public static void BreadthFirst(City start, City target)
+    {
+        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
+        boolean found = false;
+        queue.addFirst(new CityTree(start, null, null));
+        CityTree current;
+        while (true) {
+            current = queue.removeFirst();
+            if (current.city == target) {
+                found = true;
+                break;
+            }
+            current.generateBranches();
+            for (CityTree branch : current.branches) {
+                queue.addLast(branch);
+            }
+        }
+        while (current.parent != null) {
+            System.out.print(current.city.name + " < ");
+            current = current.parent;
+        }
+        System.out.println(current.city.name);
+    }
+
     public static void main(String[] args)
     {
         City oradea = new City("Oradea");
@@ -46,30 +70,6 @@ public class UninformedSearch {
         hirsova.neighbors = new City[]{urziceni, eforie};
         eforie.neighbors = new City[]{hirsova};
 
-        BreadthFirst(bucharest, arad);
-    }
-
-    public static void BreadthFirst(City start, City target)
-    {
-        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
-        boolean found = false;
-        queue.addFirst(new CityTree(start, null, null));
-        CityTree current;
-        while (true) {
-            current = queue.removeFirst();
-            if (current.city == target) {
-                found = true;
-                break;
-            }
-            current.generateBranches();
-            for (CityTree branch : current.branches) {
-                queue.addLast(branch);
-            }
-        }
-        while (current.parent != null) {
-            System.out.print(current.city.name + " < ");
-            current = current.parent;
-        }
-        System.out.println(current.city.name);
+        BreadthFirst(arad, bucharest);
     }
 }
