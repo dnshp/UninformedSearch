@@ -6,8 +6,8 @@ public class UninformedSearch {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
         queue.addFirst(new CityTree(start, null, null));
-        CityTree current;
-        while (true) {
+        CityTree current = null;
+        while (queue.size() != 0) {
             current = queue.removeFirst();
             if (current.city == target) {
                 found = true;
@@ -18,11 +18,15 @@ public class UninformedSearch {
                 queue.addLast(branch);
             }
         }
-        while (current.parent != null) {
-            System.out.print(current.city.name + " < ");
-            current = current.parent;
+        if (found) {
+            while (current.parent != null) {
+                System.out.print(current.city.name + " < ");
+                current = current.parent;
+            }
+            System.out.println(current.city.name);
+        } else {
+            System.out.println("Not found.");
         }
-        System.out.println(current.city.name);
     }
 
     public static void main(String[] args) {
@@ -48,25 +52,45 @@ public class UninformedSearch {
         City eforie = new City("Eforie");
 
         oradea.neighbors = new City[]{zerind, sibiu};
+        oradea.neighborCosts = new int[]{71, 151};
         zerind.neighbors = new City[]{oradea, arad};
+        zerind.neighborCosts = new int[]{71, 75};
         arad.neighbors = new City[]{zerind, sibiu, timisoara};
+        arad.neighborCosts = new int[]{75, 140, 118};
         timisoara.neighbors = new City[]{arad, lugoj};
+        timisoara.neighborCosts = new int[]{118, 111};
         lugoj.neighbors = new City[]{timisoara, mehadia};
+        lugoj.neighborCosts = new int[]{111, 70};
         mehadia.neighbors = new City[]{lugoj, dobreta};
+        mehadia.neighborCosts = new int[]{70, 75};
         dobreta.neighbors = new City[]{mehadia, craiova};
+        dobreta.neighborCosts = new int[]{75, 120};
         sibiu.neighbors = new City[]{oradea, arad, fagaras, rimnicu_vilcea};
+        sibiu.neighborCosts = new int[]{151, 140, 99, 80};
         rimnicu_vilcea.neighbors = new City[]{sibiu, pitesti, craiova};
+        rimnicu_vilcea.neighborCosts = new int[]{80, 97, 146};
         craiova.neighbors = new City[]{dobreta, rimnicu_vilcea, pitesti};
+        craiova.neighborCosts = new int[]{120, 146, 138};
         fagaras.neighbors = new City[]{sibiu, bucharest};
+        fagaras.neighborCosts = new int[]{99, 211};
         pitesti.neighbors = new City[]{rimnicu_vilcea, craiova, bucharest};
+        pitesti.neighborCosts = new int[]{97, 138, 101};
         bucharest.neighbors = new City[]{fagaras, pitesti, giurgiu, urziceni};
+        bucharest.neighborCosts = new int[]{211, 101, 90, 85};
         giurgiu.neighbors = new City[]{bucharest};
+        giurgiu.neighborCosts = new int[]{90};
         urziceni.neighbors = new City[]{bucharest, vaslui, hirsova};
+        urziceni.neighborCosts = new int[]{85, 142, 98};
         neamt.neighbors = new City[]{iasi};
+        neamt.neighborCosts = new int[]{87};
         iasi.neighbors = new City[]{neamt, vaslui};
+        iasi.neighborCosts = new int[]{87, 92};
         vaslui.neighbors = new City[]{iasi, urziceni};
+        vaslui.neighborCosts = new int[]{92, 142};
         hirsova.neighbors = new City[]{urziceni, eforie};
+        hirsova.neighborCosts = new int[]{98, 86};
         eforie.neighbors = new City[]{hirsova};
+        eforie.neighborCosts = new int[]{86};
 
         BreadthFirst(arad, bucharest);
     }

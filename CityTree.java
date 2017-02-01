@@ -5,6 +5,7 @@ public class CityTree {
     public City city;
     public CityTree[] branches;
     public CityTree parent;
+    public int[] branchCosts;
 
     public CityTree(City c, CityTree[] b, CityTree p) {
         city = c;
@@ -17,5 +18,7 @@ public class CityTree {
         for (int i = 0; i < city.neighbors.length; i ++) {
             branches[i] = new CityTree(city.neighbors[i], null, this);
         }
+        branchCosts = new int[city.neighborCosts.length];
+        System.arraycopy(city.neighborCosts, 0, branchCosts, 0, city.neighborCosts.length);
     }
 }

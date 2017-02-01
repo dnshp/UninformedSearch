@@ -4,7 +4,7 @@
 public class City {
     public String name;
     public City[] neighbors;
-    public City previous;
+    public int[] neighborCosts;
 
     public City(String n) {
         name = n;
