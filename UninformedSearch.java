@@ -1,11 +1,32 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * Created by dineshparimi on 1/31/17.
  */
 public class UninformedSearch {
+
+    public static int[] sortedIndices(int[] arr) {
+        int[] arrCopy = new int[arr.length];
+        System.arraycopy(arr, 0, arrCopy, 0, arr.length);
+        Arrays.sort(arr);
+        int[] indices = new int[arr.length];
+        for (int i = 0; i < arr.length; i ++) {
+            for (int j = 0; j < arr.length; j ++) {
+                if (arrCopy[j] == arr[i]) {
+                    indices[i] = j;
+                }
+            }
+        }
+        return indices;
+    }
+
     public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, null));
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
@@ -19,13 +40,41 @@ public class UninformedSearch {
             }
         }
         if (found) {
-            while (current.parent != null) {
-                System.out.print(current.city.name + " < ");
-                current = current.parent;
+            for (CityTree ancestor : current.ancestors) {
+                System.out.print(ancestor.city.name + " > ");
             }
             System.out.println(current.city.name);
         } else {
             System.out.println("Not found.");
+        }
+    }
+
+    public static void UniformCost(City start, City target) {
+        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
+        boolean found = false;
+        ArrayList<City> seen = new ArrayList<>();
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
+        CityTree current = null;
+        while (queue.size() != 0) {
+            current = queue.removeFirst();
+            if (!current.isAncestorOfSelf()) {
+                seen.add(current.city);
+                if (current.city == target) {
+                    found = true;
+                }
+                current.generateBranches();
+                int[] indices = sortedIndices(current.branchCosts);
+                for (int n = indices.length - 1; n >= 0; n --) {
+                    queue.addFirst(current.branches[indices[n]]);
+                }
+            }
+            if (found) {
+                found = false;
+                for (CityTree ancestor : current.ancestors) {
+                    System.out.print(ancestor.city.name + " > ");
+                }
+                System.out.println(current.city.name);
+            }
         }
     }
 
@@ -92,6 +141,6 @@ public class UninformedSearch {
         eforie.neighbors = new City[]{hirsova};
         eforie.neighborCosts = new int[]{86};
 
-        BreadthFirst(arad, bucharest);
+        UniformCost(arad, bucharest);
     }
 }
