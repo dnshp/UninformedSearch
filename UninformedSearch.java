@@ -2,8 +2,7 @@
  * Created by dineshparimi on 1/31/17.
  */
 public class UninformedSearch {
-    public static void BreadthFirst(City start, City target)
-    {
+    public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
         queue.addFirst(new CityTree(start, null, null));
@@ -26,8 +25,7 @@ public class UninformedSearch {
         System.out.println(current.city.name);
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         City oradea = new City("Oradea");
         City zerind = new City("Zerind");
         City arad = new City("Arad");
