@@ -46,29 +46,30 @@ public class UninformedSearch {
         hirsova.neighbors = new City[]{urziceni, eforie};
         eforie.neighbors = new City[]{hirsova};
 
-        BreadthFirst(arad, bucharest);
+        BreadthFirst(bucharest, arad);
     }
 
     public static void BreadthFirst(City start, City target)
     {
-        LinkedListQueue<City> queue = new LinkedListQueue<>();
+        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        int steps = 0;
-        queue.addFirst(start);
-        City current;
-        while (true)
-        {
+        queue.addFirst(new CityTree(start, null, null));
+        CityTree current;
+        while (true) {
             current = queue.removeFirst();
-            if (current == target) {
+            if (current.city == target) {
                 found = true;
                 break;
             }
-            for (City neighbor : current.neighbors)
-            {
-                neighbor.previous = current;
-                queue.addLast(neighbor);
+            current.generateBranches();
+            for (CityTree branch : current.branches) {
+                queue.addLast(branch);
             }
-            steps ++;
         }
+        while (current.parent != null) {
+            System.out.print(current.city.name + " < ");
+            current = current.parent;
+        }
+        System.out.println(current.city.name);
     }
 }
