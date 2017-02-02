@@ -8,6 +8,7 @@ import java.util.Collections;
  */
 public class UninformedSearch {
 
+    // returns the rearrangement of indices that sorts an array from low to high
     public static int[] sortedIndices(int[] arr) {
         int[] arrCopy = new int[arr.length];
         System.arraycopy(arr, 0, arrCopy, 0, arr.length);
@@ -23,10 +24,11 @@ public class UninformedSearch {
         return indices;
     }
 
+    // Breadth-first search
     public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
-        boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
+        boolean found = false; // Target node located?
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
@@ -34,13 +36,13 @@ public class UninformedSearch {
                 found = true;
                 break;
             }
-            current.generateBranches();
+            current.generateBranches(); // Generate next level of tree
             for (CityTree branch : current.branches) {
                 queue.addLast(branch);
             }
         }
         if (found) {
-            for (CityTree ancestor : current.ancestors) {
+            for (CityTree ancestor : current.ancestors) { // Retrieve path from CityTree object
                 System.out.print(ancestor.city.name + " > ");
             }
             System.out.println(current.city.name);
@@ -49,26 +51,27 @@ public class UninformedSearch {
         }
     }
 
+    // Depth-first search
     public static void DepthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
-            if (!current.isAncestorOfSelf()) {
+            if (!current.isAncestorOfSelf()) { // Avoid loops
                 if (current.city == target) {
                     found = true;
                     break;
                 }
-                current.generateBranches();
+                current.generateBranches(); // Continue generating tree
                 for (CityTree branch : current.branches) {
                     queue.addFirst(branch);
                 }
             }
         }
         if (found) {
-            for (CityTree ancestor : current.ancestors) {
+            for (CityTree ancestor : current.ancestors) { // Retrieve path from CityTree object
                 System.out.print(ancestor.city.name + " > ");
             }
             System.out.println(current.city.name);
@@ -78,14 +81,15 @@ public class UninformedSearch {
         }
     }
 
+    // Helper method for iterative depth-first search that runs depth-first search to a certain depth
     public static CityTree DepthIterator(City start, City target, int targetDepth, LinkedListQueue<CityTree> q) {
         LinkedListQueue<CityTree> queue = q;
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
-            if ((!current.isAncestorOfSelf()) && (current.depth <= targetDepth)) {
+            if ((!current.isAncestorOfSelf()) && (current.depth <= targetDepth)) { // Avoid loops
                 if (current.city == target) {
                     found = true;
                     break;
@@ -102,16 +106,17 @@ public class UninformedSearch {
         return null;
     }
 
+    // Depth-first search with iterative deepening
     public static void IterativeDepthFirst(City start, City target) {
         int currentDepth = -1;
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         CityTree returnValue = null;
-        while (returnValue == null) {
+        while (returnValue == null) { // Run iterator in loop, increasing depth each time until solution found
             currentDepth ++;
             returnValue = DepthIterator(start, target, currentDepth, queue);
         }
         System.out.println(currentDepth);
-        for (CityTree ancestor : returnValue.ancestors) {
+        for (CityTree ancestor : returnValue.ancestors) { // Retrieve path from CityTree object
             System.out.print(ancestor.city.name + " > ");
         }
         System.out.println(returnValue.city.name);

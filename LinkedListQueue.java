@@ -1,6 +1,7 @@
 /**
  * Created by dineshparimi on 1/28/17.
  */
+// Unsorted circular queue
 public class LinkedListQueue<Item> {
     private class Node<Item> {
         private Node previous;
@@ -13,7 +14,7 @@ public class LinkedListQueue<Item> {
         }
     }
 
-    private Node sentinel;
+    private Node sentinel; // Prevents NullPointerException in circular implementation
     private int size;
 
     public LinkedListQueue() {
