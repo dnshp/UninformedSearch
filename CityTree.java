@@ -8,11 +8,13 @@ public class CityTree {
     public CityTree[] branches;
     public int[] branchCosts;
     public ArrayList<CityTree> ancestors = new ArrayList<>();
+    public int depth;
 
-    public CityTree(City c, CityTree[] b, ArrayList<CityTree> a) {
+    public CityTree(City c, CityTree[] b, ArrayList<CityTree> a, int d) {
         city = c;
         branches = b;
         ancestors = a;
+        depth = d;
     }
 
     public void generateBranches() {
@@ -23,7 +25,7 @@ public class CityTree {
                 newAncestors.add(ancestor);
             }
             newAncestors.add(this);
-            branches[i] = new CityTree(city.neighbors[i], null, newAncestors);
+            branches[i] = new CityTree(city.neighbors[i], null, newAncestors, depth + 1);
         }
         branchCosts = new int[city.neighborCosts.length];
         System.arraycopy(city.neighborCosts, 0, branchCosts, 0, city.neighborCosts.length);

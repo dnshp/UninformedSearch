@@ -26,7 +26,7 @@ public class UninformedSearch {
     public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
@@ -51,12 +51,14 @@ public class UninformedSearch {
 
     public static void DepthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
+        boolean found = false;
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
             if (!current.isAncestorOfSelf()) {
                 if (current.city == target) {
+                    found = true;
                     break;
                 }
                 current.generateBranches();
@@ -65,10 +67,54 @@ public class UninformedSearch {
                 }
             }
         }
-        for (CityTree ancestor : current.ancestors) {
+        if (found) {
+            for (CityTree ancestor : current.ancestors) {
+                System.out.print(ancestor.city.name + " > ");
+            }
+            System.out.println(current.city.name);
+        }
+        else {
+            System.out.println("Not found");
+        }
+    }
+
+    public static CityTree DepthIterator(City start, City target, int targetDepth, LinkedListQueue<CityTree> q) {
+        LinkedListQueue<CityTree> queue = q;
+        boolean found = false;
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
+        CityTree current = null;
+        while (queue.size() != 0) {
+            current = queue.removeFirst();
+            if ((!current.isAncestorOfSelf()) && (current.depth <= targetDepth)) {
+                if (current.city == target) {
+                    found = true;
+                    break;
+                }
+                current.generateBranches();
+                for (CityTree branch: current.branches) {
+                    queue.addFirst(branch);
+                }
+            }
+        }
+        if (found) {
+            return current;
+        }
+        return null;
+    }
+
+    public static void IterativeDepthFirst(City start, City target) {
+        int currentDepth = -1;
+        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
+        CityTree returnValue = null;
+        while (returnValue == null) {
+            currentDepth ++;
+            returnValue = DepthIterator(start, target, currentDepth, queue);
+        }
+        System.out.println(currentDepth);
+        for (CityTree ancestor : returnValue.ancestors) {
             System.out.print(ancestor.city.name + " > ");
         }
-        System.out.println(current.city.name);
+        System.out.println(returnValue.city.name);
     }
 
     //Currently does not work; need to implement priority queue
@@ -76,7 +122,7 @@ public class UninformedSearch {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
         ArrayList<City> seen = new ArrayList<>();
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0));
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
