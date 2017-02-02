@@ -25,7 +25,7 @@
       <file leaf-file-name="LinkedListQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LinkedListQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="345">
               <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
@@ -35,8 +35,8 @@
       <file leaf-file-name="UninformedSearch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="288">
+              <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,13 +47,9 @@
       <file leaf-file-name="CityTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CityTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-              <folding>
-                <element signature="e#596#606#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,7 +57,7 @@
       <file leaf-file-name="City.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/City.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="120">
               <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="e#179#180#0" expanded="true" />
@@ -79,6 +75,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>seen</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,9 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +159,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -579,12 +580,13 @@
       <workItem from="1485926516593" duration="4707000" />
       <workItem from="1485978860326" duration="43000" />
       <workItem from="1485980180884" duration="2865000" />
-      <workItem from="1485987172797" duration="1677000" />
+      <workItem from="1485987172797" duration="2080000" />
+      <workItem from="1485992775440" duration="1876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17114000" />
+    <option name="totallyTimeSpent" value="19393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="47" width="1400" height="777" extended-state="0" />
@@ -598,8 +600,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -611,8 +613,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -646,6 +648,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CityTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedListQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -658,11 +697,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -699,11 +734,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,11 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -781,11 +808,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,11 +845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,11 +882,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +1025,7 @@
     <entry file="file://$PROJECT_DIR$/CityPair.java" />
     <entry file="file://$PROJECT_DIR$/LinkedListQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="345">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
@@ -1018,7 +1033,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/City.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="120">
           <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#179#180#0" expanded="true" />
@@ -1029,20 +1044,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CityTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#596#606#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

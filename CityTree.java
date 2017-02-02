@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class CityTree {
     public City city;
     public CityTree[] branches;
-    public ArrayList<CityTree> ancestors = new ArrayList<>();
     public int[] branchCosts;
+    public ArrayList<CityTree> ancestors = new ArrayList<>();
 
     public CityTree(City c, CityTree[] b, ArrayList<CityTree> a) {
         city = c;

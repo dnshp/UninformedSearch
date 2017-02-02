@@ -49,6 +49,29 @@ public class UninformedSearch {
         }
     }
 
+    public static void DepthFirst(City start, City target) {
+        LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
+        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>()));
+        CityTree current = null;
+        while (queue.size() != 0) {
+            current = queue.removeFirst();
+            if (!current.isAncestorOfSelf()) {
+                if (current.city == target) {
+                    break;
+                }
+                current.generateBranches();
+                for (CityTree branch : current.branches) {
+                    queue.addFirst(branch);
+                }
+            }
+        }
+        for (CityTree ancestor : current.ancestors) {
+            System.out.print(ancestor.city.name + " > ");
+        }
+        System.out.println(current.city.name);
+    }
+
+    //Currently does not work; need to implement priority queue
     public static void UniformCost(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
@@ -141,6 +164,6 @@ public class UninformedSearch {
         eforie.neighbors = new City[]{hirsova};
         eforie.neighborCosts = new int[]{86};
 
-        UniformCost(arad, bucharest);
+        BreadthFirst(arad, bucharest);
     }
 }
