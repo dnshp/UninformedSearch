@@ -27,14 +27,14 @@ public class LinkedListQueue<Item> {
     }
 
     public void addFirst(Item newItem) {
-        Node<Item> newNode = new Node<Item>(sentinel, newItem, sentinel.next);
+        Node<Item> newNode = new Node<>(sentinel, newItem, sentinel.next);
         sentinel.next.previous = newNode;
         sentinel.next = newNode;
         size++;
     }
 
     public void addLast(Item newItem) {
-        Node<Item> newNode = new Node<Item>(sentinel.previous, newItem, sentinel);
+        Node<Item> newNode = new Node<>(sentinel.previous, newItem, sentinel);
         sentinel.previous.next = newNode;
         sentinel.previous = newNode;
         size++;

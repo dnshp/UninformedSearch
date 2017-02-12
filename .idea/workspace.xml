@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="817d5ba4-6a5f-42f5-882e-5a9556c782f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedListQueue.java" afterPath="$PROJECT_DIR$/LinkedListQueue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UninformedSearch.java" afterPath="$PROJECT_DIR$/UninformedSearch.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +23,8 @@
       <file leaf-file-name="LinkedListQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LinkedListQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+            <state relative-caret-position="-1362">
+              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -30,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UninformedSearch.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UninformedSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="-1737">
+              <caret line="66" column="63" lean-forward="false" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,7 +47,7 @@
       <file leaf-file-name="CityTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CityTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
+            <state relative-caret-position="450">
               <caret line="30" column="123" lean-forward="true" selection-start-line="30" selection-start-column="123" selection-end-line="30" selection-end-column="123" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -56,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="City.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="City.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/City.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -102,8 +104,8 @@
         <option value="$PROJECT_DIR$/CityPair.java" />
         <option value="$PROJECT_DIR$/City.java" />
         <option value="$PROJECT_DIR$/CityTree.java" />
-        <option value="$PROJECT_DIR$/LinkedListQueue.java" />
         <option value="$PROJECT_DIR$/UninformedSearch.java" />
+        <option value="$PROJECT_DIR$/LinkedListQueue.java" />
       </list>
     </option>
   </component>
@@ -589,12 +591,12 @@
       <workItem from="1486268923981" duration="13000" />
       <workItem from="1486316593129" duration="53000" />
       <workItem from="1486326145578" duration="599000" />
-      <workItem from="1486855646024" duration="2499000" />
+      <workItem from="1486855646024" duration="3003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24760000" />
+    <option name="totallyTimeSpent" value="25264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="47" width="1400" height="777" extended-state="0" />
@@ -1114,21 +1116,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CityPair.java" />
-    <entry file="file://$PROJECT_DIR$/City.java">
+    <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="-1737">
+          <caret line="66" column="63" lean-forward="false" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
           <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LinkedListQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="-1362">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -1137,7 +1138,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CityTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
+        <state relative-caret-position="450">
           <caret line="30" column="123" lean-forward="true" selection-start-line="30" selection-start-column="123" selection-end-line="30" selection-end-column="123" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1147,12 +1148,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UninformedSearch.java">
+    <entry file="file://$PROJECT_DIR$/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -13,7 +13,7 @@ public class UninformedSearch {
     public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false; // Target node located?
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0, 0)); // Begin generating tree
+        queue.addFirst(new CityTree(start, null, new ArrayList<>(), 0, 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
@@ -37,7 +37,7 @@ public class UninformedSearch {
     public static void DepthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0, 0)); // Begin generating tree
+        queue.addFirst(new CityTree(start, null, new ArrayList<>(), 0, 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
@@ -64,7 +64,7 @@ public class UninformedSearch {
     public static CityTree DepthIterator(City start, City target, int targetDepth, LinkedListQueue<CityTree> q) {
         LinkedListQueue<CityTree> queue = q;
         boolean found = false;
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0, 0)); // Begin generating tree
+        queue.addFirst(new CityTree(start, null, new ArrayList<>(), 0, 0)); // Begin generating tree
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
