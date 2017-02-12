@@ -1,6 +1,8 @@
 /**
  * Created by dineshparimi on 1/28/17.
  */
+import java.util.Comparator;
+
 // Unsorted circular queue
 public class LinkedListQueue<Item> {
     private class Node<Item> {
@@ -101,5 +103,24 @@ public class LinkedListQueue<Item> {
             return (Item) currentNode.item;
         }
         return getNodeRecursive(currentNode.next, index - 1);
+    }
+
+    public void addSorted(Item addedItem, Comparator<Item> c) {
+        Node<Item> curr = sentinel.next;
+        if (size == 0) {
+            addFirst(addedItem);
+            return;
+        }
+        while (!curr.equals(sentinel)) {
+            if ((c.compare(addedItem, curr.item) < 0) || (curr.equals(sentinel))) {
+                Node<Item> newNode = new Node<>(curr.previous, addedItem, curr);
+                curr.previous.next = newNode;
+                curr.previous = newNode;
+                size ++;
+                return;
+            }
+            curr = curr.next;
+        }
+        addLast(addedItem);
     }
 }

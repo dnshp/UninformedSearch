@@ -43,10 +43,7 @@ public class UninformedSearch {
             }
         }
         if (found) {
-            for (CityTree ancestor : current.ancestors) { // Retrieve path from CityTree object
-                System.out.print(ancestor.city.name + " > ");
-            }
-            System.out.println(current.city.name);
+            System.out.println(getPath(current));
         } else {
             System.out.println("Not found.");
         }
@@ -72,10 +69,7 @@ public class UninformedSearch {
             }
         }
         if (found) {
-            for (CityTree ancestor : current.ancestors) { // Retrieve path from CityTree object
-                System.out.print(ancestor.city.name + " > ");
-            }
-            System.out.println(current.city.name);
+            System.out.println(getPath(current));
         }
         else {
             System.out.println("Not found");
@@ -117,40 +111,45 @@ public class UninformedSearch {
             returnValue = DepthIterator(start, target, currentDepth, queue);
         }
         System.out.println(currentDepth);
-        for (CityTree ancestor : returnValue.ancestors) { // Retrieve path from CityTree object
-            System.out.print(ancestor.city.name + " > ");
-        }
-        System.out.println(returnValue.city.name);
+        System.out.println(getPath(returnValue));
     }
 
     //Currently does not work; need to implement priority queue
     public static void UniformCost(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
         boolean found = false;
-        ArrayList<City> seen = new ArrayList<>();
-        queue.addFirst(new CityTree(start, null, new ArrayList<CityTree>(), 0, 0));
+        Comparator<CityTree> ctc = new CityTree.totalCostComparator();
+        queue.addFirst(new CityTree(start, null, new ArrayList<>(), 0, 0));
         CityTree current = null;
         while (queue.size() != 0) {
             current = queue.removeFirst();
-            if (!current.isAncestorOfSelf()) {
-                seen.add(current.city);
+            if (!current.isAncestorOfSelf()) { // Avoid loops
                 if (current.city == target) {
                     found = true;
+                    break;
                 }
                 current.generateBranches();
-                int[] indices = sortedIndices(current.branchCosts);
-                for (int n = indices.length - 1; n >= 0; n --) {
-                    queue.addFirst(current.branches[indices[n]]);
+                for (CityTree branch: current.branches) {
+                    queue.addSorted(branch, ctc);
                 }
-            }
-            if (found) {
-                found = false;
-                for (CityTree ancestor : current.ancestors) {
-                    System.out.print(ancestor.city.name + " > ");
-                }
-                System.out.println(current.city.name);
             }
         }
+        if (found) {
+            System.out.println(getPath(current));
+            System.out.println(current.pathCost);
+        }
+        else {
+            System.out.println("Not found.");
+        }
+    }
+
+    private static String getPath(CityTree ct) {
+        String rv = "";
+        for (CityTree ancestor : ct.ancestors) {
+            rv += (ancestor.city.name + " > ");
+        }
+        rv += ct.city.name;
+        return rv;
     }
 
     public static void main(String[] args) {
@@ -216,6 +215,6 @@ public class UninformedSearch {
         eforie.neighbors = new City[]{hirsova};
         eforie.neighborCosts = new int[]{86};
 
-        IterativeDepthFirst(arad, bucharest);
+        UniformCost(arad, bucharest);
     }
 }
