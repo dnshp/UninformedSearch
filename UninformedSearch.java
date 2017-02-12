@@ -9,22 +9,6 @@ import java.util.Comparator;
  */
 public class UninformedSearch {
 
-    // returns the rearrangement of indices that sorts an array from low to high
-    public static int[] sortedIndices(int[] arr) {
-        int[] arrCopy = new int[arr.length];
-        System.arraycopy(arr, 0, arrCopy, 0, arr.length);
-        Arrays.sort(arr);
-        int[] indices = new int[arr.length];
-        for (int i = 0; i < arr.length; i ++) {
-            for (int j = 0; j < arr.length; j ++) {
-                if (arrCopy[j] == arr[i]) {
-                    indices[i] = j;
-                }
-            }
-        }
-        return indices;
-    }
-
     // Breadth-first search
     public static void BreadthFirst(City start, City target) {
         LinkedListQueue<CityTree> queue = new LinkedListQueue<>();
