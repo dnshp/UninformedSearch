@@ -199,6 +199,23 @@ public class UninformedSearch {
         eforie.neighbors = new City[]{hirsova};
         eforie.neighborCosts = new int[]{86};
 
-        UniformCost(arad, bucharest);
+        City[] allCities = new City[]{oradea, zerind, arad, timisoara, lugoj, mehadia, dobreta, sibiu, rimnicu_vilcea,
+                craiova, fagaras, pitesti, bucharest, giurgiu, urziceni, neamt, iasi, vaslui, hirsova, eforie};
+        City start = null;
+        City target = null;
+        for (City city : allCities) {
+            if (city.name.equals(args[0])) {
+                start = city;
+            }
+            if (city.name.equals(args[1])) {
+                target = city;
+            }
+        }
+        if ((start == null) || (target == null)) {
+            System.out.println("Error - invalid city names.");
+        }
+        else {
+            UniformCost(start, target);
+        }
     }
 }
