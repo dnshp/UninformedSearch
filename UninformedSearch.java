@@ -61,7 +61,7 @@ public class UninformedSearch {
     }
 
     // Helper method for iterative depth-first search that runs depth-first search to a certain depth
-    public static CityTree DepthIterator(City start, City target, int targetDepth, LinkedListQueue<CityTree> q) {
+    private static CityTree DepthIterator(City start, City target, int targetDepth, LinkedListQueue<CityTree> q) {
         LinkedListQueue<CityTree> queue = q;
         boolean found = false;
         queue.addFirst(new CityTree(start, null, new ArrayList<>(), 0, 0)); // Begin generating tree
